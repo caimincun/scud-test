@@ -77,6 +77,6 @@ public class UserTest {
     @Test
     public void testNumberFormatException() {
         //这里就会发生NumberFormatException，然后就会返回定义在SpringMVC配置文件中的number视图
-        Integer.parseInt("abc");
+//        Integer.parseInt("abc");
     }
 }
