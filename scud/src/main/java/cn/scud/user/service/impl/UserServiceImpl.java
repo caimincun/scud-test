@@ -1,8 +1,8 @@
-package cn.scud.service.impl;
+package cn.scud.user.service.impl;
 
-import cn.scud.dao.UserDao;
-import cn.scud.model.User;
-import cn.scud.service.UserService;
+import cn.scud.user.dao.UserDao;
+import cn.scud.user.model.User;
+import cn.scud.user.service.UserService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

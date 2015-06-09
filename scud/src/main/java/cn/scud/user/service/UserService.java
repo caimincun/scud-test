@@ -1,7 +1,7 @@
-package cn.scud.service;
+package cn.scud.user.service;
 
 
-import cn.scud.model.User;
+import cn.scud.user.model.User;
 
 import java.util.List;
 

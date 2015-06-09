@@ -1,6 +1,6 @@
-package cn.scud.model;
+package cn.scud.user.model;
 
-import cn.scud.service.UserService;
+import cn.scud.user.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
