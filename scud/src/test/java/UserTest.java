@@ -1,6 +1,8 @@
-package cn.scud.model;
+package cn.scud.user.model;
 
-import cn.scud.service.UserService;
+import cn.scud.commoms.response.AbstractJsonRes;
+import cn.scud.commoms.response.SuccessJsonRes;
+import cn.scud.user.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
@@ -8,6 +10,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 /**
@@ -78,5 +82,12 @@ public class UserTest {
     public void testNumberFormatException() {
         //这里就会发生NumberFormatException，然后就会返回定义在SpringMVC配置文件中的number视图
 //        Integer.parseInt("abc");
+    }
+
+    @ResponseBody
+    @RequestMapping(value="/user/json")
+    public AbstractJsonRes testJson(User user)
+    {
+        return new SuccessJsonRes();
     }
 }

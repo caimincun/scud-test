@@ -1,7 +1,7 @@
-package cn.scud.dao;
+package cn.scud.user.dao;
 
 
-import cn.scud.model.User;
+import cn.scud.user.model.User;
 
 import java.util.List;
 
