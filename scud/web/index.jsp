@@ -12,7 +12,7 @@
   </head>
   <body>
   注册测试
-  <form action="/user/add" method="post">
+  <form action="/user/json" method="post">
     <p>First name: <input type="text" name="name" /></p>
     <p>Last name: <input type="password" name="password" /></p>
     <input type="submit" value="Submit" />

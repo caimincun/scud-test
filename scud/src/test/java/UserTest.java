@@ -1,6 +1,8 @@
-package cn.scud.user.model;
+package cn.scud.main.user.model;
 
-import cn.scud.user.service.UserService;
+import cn.scud.commoms.response.AbstractJsonRes;
+import cn.scud.commoms.response.SuccessJsonRes;
+import cn.scud.main.user.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
@@ -8,6 +10,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 /**
@@ -79,4 +83,40 @@ public class UserTest {
         //这里就会发生NumberFormatException，然后就会返回定义在SpringMVC配置文件中的number视图
 //        Integer.parseInt("abc");
     }
+
+    /**
+     * 测试返回json
+     * @param user
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value="/user/json")
+    public AbstractJsonRes testJson(User user)
+    {
+        return new SuccessJsonRes();
+    }
+
+    /**
+     * 测试返回 json List<Date></>
+     * @param user
+     * @return
+     */
+//    @ResponseBody
+//    @RequestMapping(value="/user/json")
+//    public ListSucRes testJson(User user)
+//    {
+////        return new SuccessJsonRes();
+//        List<User> users = new ArrayList<User>();
+//        User user1 = new User();
+//        user1.setName("name1");
+//        user1.setPassword("pwd1");
+//        User user2 = new User();
+//        user2.setName("name2");
+//        user.setPassword("pwd");
+//        users.add(user1);
+//        users.add(user2);
+//        ListSucRes list = new ListSucRes();
+//        list.setData(users);
+//        return list;
+//    }
 }

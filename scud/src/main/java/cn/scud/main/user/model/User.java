@@ -1,4 +1,4 @@
-package cn.scud.user.model;
+package cn.scud.main.user.model;
 
 import java.io.Serializable;
 
