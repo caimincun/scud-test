@@ -27,7 +27,7 @@ public class WebUtil {
 
 
     //生成ID
-    public static String generatorID() {
+    public static String getGeratorID() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmssSSS");
         Date date = new Date();
         String dateStr = sdf.format(date);
@@ -106,7 +106,7 @@ public class WebUtil {
         if(ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)){
             ip = request.getRemoteAddr();
         }
-        return ip.equals("0:0:0:0:0:0:0:1")?"127.0.0.1":ip;
+        return ip;
     }
 
     // 返回当前时间，格式：2015-06-12 03:02:24

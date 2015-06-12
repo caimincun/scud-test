@@ -28,29 +28,29 @@ public class UserTest {
     /**
      * 日志功能测试测试
      */
-    @Test
-    public void testLog(){
-
-        User user=new User();
-        user.setId(4);
-        user.setName("cmc");
-        user.setPassword("123456");
-
-        //  记录 debug 级别的信息
-
-        logger.debug("This log message leavel.debug:"+user);
-
-        //  记录 info 级别的信息
-
-        logger.info("This log message leavel.info:"+user);
-
-        //  记录 error 级别的信息
-
-        logger.error("This log message leavel.error:"+user);
-
-        userService.add(user);
-
-    }
+//    @Test
+//    public void testLog(){
+//
+//        User user=new User();
+//        user.setId(4);
+//        user.setName("cmc");
+//        user.setPassword("123456");
+//
+//        //  记录 debug 级别的信息
+//
+//        logger.debug("This log message leavel.debug:"+user);
+//
+//        //  记录 info 级别的信息
+//
+//        logger.info("This log message leavel.info:"+user);
+//
+//        //  记录 error 级别的信息
+//
+//        logger.error("This log message leavel.error:"+user);
+//
+//        userService.add(user);
+//
+//    }
 
 
     @Autowired
@@ -60,20 +60,20 @@ public class UserTest {
     /**
      * 简单的springmvc mybatis junit 插入测试
      */
-    @Test
-    public void addUser(){
-        try {
-            User user=new User();
-            user.setId(2);
-            user.setName("cmc");
-            user.setPassword("123456");
-            userService.add(user);
-        }catch (Exception e){
-            System.out.println(e);
-        }
-        System.out.println("测试成功");
-
-    }
+//    @Test
+//    public void addUser(){
+//        try {
+//            User user=new User();
+//            user.setId(2);
+//            user.setName("cmc");
+//            user.setPassword("123456");
+//            userService.add(user);
+//        }catch (Exception e){
+//            System.out.println(e);
+//        }
+//        System.out.println("测试成功");
+//
+//    }
 
     /**
      * 数据转换异常拦截处理测试

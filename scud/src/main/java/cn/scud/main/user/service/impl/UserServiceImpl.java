@@ -1,8 +1,10 @@
 package cn.scud.main.user.service.impl;
 
+import cn.scud.commoms.CommonParamDefined;
 import cn.scud.main.user.dao.UserDao;
 import cn.scud.main.user.model.User;
 import cn.scud.main.user.service.UserService;
+import cn.scud.utils.WebUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -21,7 +23,11 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public void add(User user) {
+    public void addUser(User user) {
+        user.setLastLoginDate(WebUtil.getCurrentTime());
+        user.setUserToken(WebUtil.getGeratorID());
+        user.setRegDate(WebUtil.getCurrentTime());
+        user.setRegChannel(CommonParamDefined.ANDROID);
         userDao.add(user);
     }
 

@@ -11,7 +11,13 @@ import java.util.List;
 
 public interface UserService {
 
-    void add(User user);
+    /**
+     * 用户注册
+     * @param user
+     */
+    void addUser(User user);
+
+    int queryUserByPhoneNmuber
 
     List<User> findAll();
 

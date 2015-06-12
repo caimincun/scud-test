@@ -3,6 +3,7 @@ package cn.scud.main.user.controller;
 import cn.scud.commoms.response.ListSucRes;
 import cn.scud.main.user.model.User;
 import cn.scud.main.user.service.UserService;
+import cn.scud.utils.WebUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,42 +31,13 @@ public class UserController {
      * @return
      */
     @RequestMapping(value="/user/add",method = RequestMethod.POST)
-    public String addUser(User user){
-        System.out.println("user:"+user);
-       userService.add(user);
+    public String addUser(User user,HttpServletRequest request){
+        // 判断手机号码是否被注册
+        String ip = WebUtil.getRemoteHost(request);
+        user.setLastLoginIp(ip);
+        userService.addUser(user);
         return "success";
     }
-    @ResponseBody
-    @RequestMapping(value="/user/json")
-    public ListSucRes testJson(User user)
-    {
-//        return new SuccessJsonRes();
-        List<User> users = new ArrayList<User>();
-        User user1 = new User();
-        user1.setName("name1");
-        user1.setPassword("pwd1");
-        User user2 = new User();
-        user2.setName("name2");
-        user.setPassword("pwd");
-        users.add(user1);
-        users.add(user2);
-        ListSucRes list = new ListSucRes();
-        list.setData(users);
-        return list;
-    }
-
-
-    @RequestMapping(value="/user/add2")
-    public ModelAndView addUser2(User user){
-        System.out.println("user:"+user);
-        userService.add(user);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("user",user);
-        modelAndView.setViewName("success");
-        return modelAndView;
-
-    }
-
 
 
 

@@ -13,10 +13,16 @@ public class CommonParamDefined {
      * 短信验证码
      */
     public static final String SMS_CHECKCODE="smscheckcode";
+//    /**
+//     * 微信openid
+//     */
+//    public static final String OPENID = "openid";
+
     /**
-     * 微信openid
+     * android 移动端注标识
      */
-    public static final String OPENID = "openid";
+    public static final String ANDROID = "android";
+
 //    /**
 //     * 微信回调地址
 //     */

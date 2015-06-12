@@ -5,13 +5,20 @@
   Time: 15:58
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page session="false" %>
+<%
+  String path = request.getContextPath();
+  String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <html>
   <head>
+    <base href="<%=basePath%>">
+    <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-  注册测试
+  用户注册：
   <form action="/user/json" method="post">
     <p>First name: <input type="text" name="name" /></p>
     <p>Last name: <input type="password" name="password" /></p>
