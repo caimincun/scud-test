@@ -108,4 +108,11 @@ public class WebUtil {
         }
         return ip.equals("0:0:0:0:0:0:0:1")?"127.0.0.1":ip;
     }
+
+    // 返回当前时间，格式：2015-06-12 03:02:24
+    public static String getCurrentTime(){
+        SimpleDateFormat   sDateFormat   =   new   SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        String  date   =   sDateFormat.format(new   java.util.Date());
+        return date;
+    }
 }

@@ -2,3 +2,8 @@
 /scud/target/*
 /sucd/sucd.iml
 /scud/scud.iws
+/scud/out
+/scud/target
+/scud/*.iml
+/.idea
+/scud/.idea

@@ -20,7 +20,7 @@ public class SplitDateUtil {
         SimpleDateFormat month = new SimpleDateFormat("MM");
         SimpleDateFormat day = new SimpleDateFormat("dd");
         SimpleDateFormat hour = new SimpleDateFormat("HH");
-        Map<String,Integer> result = new HashMap<>();
+        Map<String,Integer> result = new HashMap<String,Integer>();
         result.put("hour",Integer.parseInt(hour.format(date)));
         result.put("month",Integer.parseInt(month.format(date)));
         result.put("day",Integer.parseInt(day.format(date)));
