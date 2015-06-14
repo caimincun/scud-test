@@ -4,14 +4,12 @@
 
 <mapper namespace="cn.scud.main.user.dao.UserDao">
     <cache />
-
     <select id="selectAll" resultType="User"  flushCache="true">
         select * from user
     </select>
-
-    <insert id="add" parameterType="User">
-        INSERT INTO user (name, password)
-        VALUES (#{name}, #{password})
+    <insert id="addUser" parameterType="User">
+        INSERT INTO user (phone_number, password,user_token,reg_channel,reg_date,last_login_date,last_login_ip)
+        VALUES (#{phoneNumber}, #{Password},#{userToken},#{RegChannel},#{regDate},#{LastLoginDate},#{LastLoginIp})
     </insert>
 
 </mapper>

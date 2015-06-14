@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
         user.setUserToken(WebUtil.getGeratorID());
         user.setRegDate(WebUtil.getCurrentTime());
         user.setRegChannel(CommonParamDefined.ANDROID);
-        userDao.add(user);
+        userDao.addUser(user);
     }
 
     // 级联查询

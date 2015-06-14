@@ -11,6 +11,6 @@
     <title></title>
 </head>
 <body>
- 注册测试成功了!用户名为：${user.name}
+ 注册测试成功了！
 </body>
 </html>

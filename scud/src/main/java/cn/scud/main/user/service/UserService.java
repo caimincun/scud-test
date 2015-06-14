@@ -17,7 +17,7 @@ public interface UserService {
      */
     void addUser(User user);
 
-    int queryUserByPhoneNmuber
+//    int queryUserByPhoneNmuber();
 
     List<User> findAll();
 
