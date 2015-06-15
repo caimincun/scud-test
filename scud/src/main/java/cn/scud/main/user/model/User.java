@@ -8,9 +8,9 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
-    private int UserId;
+    private int id;
 
-    private String UserName;
+    private String phoneNumber;
 
     private String Password;
     // 唯一标识
@@ -24,20 +24,20 @@ public class User implements Serializable {
     // 最后一次登录Ip
     private String LastLoginIp;
 
-    public int getUserId() {
-        return UserId;
+    public int getId() {
+        return id;
     }
 
-    public void setUserId(int userId) {
-        UserId = userId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getUserName() {
-        return UserName;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setUserName(String userName) {
-        UserName = userName;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getPassword() {
@@ -91,8 +91,8 @@ public class User implements Serializable {
     @Override
     public String toString() {
         return "User{" +
-                "UserId=" + UserId +
-                ", UserName='" + UserName + '\'' +
+                "id=" + id +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", Password='" + Password + '\'' +
                 ", userToken='" + userToken + '\'' +
                 ", RegChannel='" + RegChannel + '\'' +

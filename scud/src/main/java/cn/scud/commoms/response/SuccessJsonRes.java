@@ -6,8 +6,11 @@ import cn.scud.commoms.CodeDefined;
 /**
  * Created by Victor on 2014/4/12.
  */
-public class SuccessJsonRes extends AbstractJsonRes {
+public class SuccessJsonRes extends OperatorResponse {
+
     public SuccessJsonRes() {
-        super(CodeDefined.SUCCESS, CodeDefined.getMessage(CodeDefined.SUCCESS));
+        setRespStatus(new AbstractJsonRes(CodeDefined.SUCCESS, CodeDefined.getMessage(CodeDefined.SUCCESS)));
     }
+
+
 }

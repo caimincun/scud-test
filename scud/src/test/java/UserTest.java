@@ -89,12 +89,12 @@ public class UserTest {
      * @param user
      * @return
      */
-    @ResponseBody
-    @RequestMapping(value="/user/json")
-    public AbstractJsonRes testJson(User user)
-    {
-        return new SuccessJsonRes();
-    }
+//    @ResponseBody
+//    @RequestMapping(value="/user/json")
+//    public AbstractJsonRes testJson(User user)
+//    {
+//        return new SuccessJsonRes();
+//    }
 
     /**
      * 测试返回 json List<Date></>

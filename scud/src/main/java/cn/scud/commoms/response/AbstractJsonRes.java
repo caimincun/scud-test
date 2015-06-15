@@ -3,7 +3,7 @@ package cn.scud.commoms.response;
 /**
  * Created by victor on 14-4-11.
  */
-public abstract class AbstractJsonRes {
+public  class AbstractJsonRes {
 
     private int result;
 

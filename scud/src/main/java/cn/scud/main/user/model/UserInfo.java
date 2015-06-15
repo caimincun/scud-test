@@ -8,8 +8,10 @@ public class UserInfo {
 
     private int UserInfoId;
 
-    private int User;
+    private int UserID;
 
+    private String userName;
+    // 真是姓名
     private String UserRealName;
     // 身份证号码
     private String UserIdCardNum;
@@ -17,6 +19,14 @@ public class UserInfo {
     private String UserInfoEmail;
     // 性别
     private int UserInfoSex;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public int getUserInfoId() {
         return UserInfoId;
@@ -26,12 +36,12 @@ public class UserInfo {
         UserInfoId = userInfoId;
     }
 
-    public int getUser() {
-        return User;
+    public int getUserID() {
+        return UserID;
     }
 
-    public void setUser(int user) {
-        User = user;
+    public void setUserID(int userID) {
+        UserID = userID;
     }
 
     public String getUserRealName() {
@@ -70,7 +80,8 @@ public class UserInfo {
     public String toString() {
         return "UserInfo{" +
                 "UserInfoId=" + UserInfoId +
-                ", User=" + User +
+                ", UserID=" + UserID +
+                ", userName='" + userName + '\'' +
                 ", UserRealName='" + UserRealName + '\'' +
                 ", UserIdCardNum='" + UserIdCardNum + '\'' +
                 ", UserInfoEmail='" + UserInfoEmail + '\'' +

@@ -20,8 +20,8 @@
   <body>
   用户注册：
   <form action="/user/add" method="post">
-    <p>电话号码: <input type="text" name="phoneNumber" /></p>
-    <p>密码: <input type="password" name="Password" /></p>
+    <p>First name: <input type="text" name="phoneNumber" /></p>
+    <p>Last name: <input type="password" name="Password" /></p>
     <input type="submit" value="Submit" />
   </form>
   </body>
