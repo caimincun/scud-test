@@ -5,6 +5,7 @@ import java.io.InputStream;
 
 /**
  * Created by Administrator on 2015/6/14.
+ *  获取前台的输入流，转换为 实体对象
  */
 public  class StreamSerializer {
 
