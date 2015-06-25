@@ -1,17 +1,16 @@
-package cn.scud.main.user.model;
 
-import cn.scud.commoms.response.AbstractJsonRes;
-import cn.scud.commoms.response.SuccessJsonRes;
-import cn.scud.main.user.service.UserService;
+//import cn.scud.main.user.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+//import org.junit.Test;
+//import org.junit.runner.RunWith;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.test.context.ContextConfiguration;
+//import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
 /**
@@ -22,7 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserTest {
 
     //    private static Log logger = LogFactory.getLog(UserTest.class.getClass());
-    static Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
+//    static Logger logger = LogManager.getLogger(LogManager.ROOT_LOGGER_NAME);
 //static Logger logger = LogManager.getLogger(UserTest.class.getClass());// 似乎是传递的类的名称有问题
 
     /**
@@ -52,9 +51,6 @@ public class UserTest {
 //
 //    }
 
-
-    @Autowired
-    private UserService userService;
 
 
     /**
@@ -119,4 +115,20 @@ public class UserTest {
 //        list.setData(users);
 //        return list;
 //    }
+
+
+    static Logger logger = LogManager.getLogger();
+
+    @Test
+    public static void main(String[] arg) {
+        for (int i = 0; i < 10; i++) {
+            logger.trace("trace message " + i);
+            logger.debug("debug message " + i);
+            logger.info("info message " + i);
+            logger.warn("warn message " + i);
+            logger.error("error message " + i);
+            logger.fatal("fatal message " + i);
+        }
+        System.out.println("Hello World! 2");
+    }
 }

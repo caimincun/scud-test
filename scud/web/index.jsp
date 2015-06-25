@@ -18,10 +18,10 @@
     <title></title>
   </head>
   <body>
-  用户注册：
-  <form action="/user/add" method="post">
+  用户登录：
+  <form action="/user/userLogin" method="post">
     <p>电话号码: <input type="text" name="phoneNumber" /></p>
-    <p>密码: <input type="password" name="Password" /></p>
+    <p>密码: <input type="password" name="password" /></p>
     <input type="submit" value="Submit" />
   </form>
   </body>

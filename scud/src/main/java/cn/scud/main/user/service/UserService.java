@@ -17,6 +17,13 @@ public interface UserService {
      */
     void addUser(User user);
 
+    /**
+     * 用户登录
+     * @param user
+     * @return
+     */
+    User loginUser(User user);
+
 //    int queryUserByPhoneNmuber();
 
     List<User> findAll();

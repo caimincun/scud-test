@@ -6,8 +6,10 @@ import cn.scud.main.user.model.User;
 import cn.scud.main.user.service.UserService;
 import cn.scud.utils.WebUtil;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import javax.sound.midi.Soundbank;
 import java.util.List;
 
 /**
@@ -23,12 +25,18 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
+    @Transactional
     public void addUser(User user) {
         user.setLastLoginDate(WebUtil.getCurrentTime());
         user.setUserToken(WebUtil.getGeratorID());
         user.setRegDate(WebUtil.getCurrentTime());
         user.setRegChannel(CommonParamDefined.ANDROID);
         userDao.addUser(user);
+    }
+
+    @Override
+    public User loginUser(User user) {
+        return userDao.loginUser(user);
     }
 
     // 级联查询

@@ -60,7 +60,7 @@
 
 
     <!--&lt;!&ndash;自定义异常处理:HanderExecptionResolver&ndash;&gt;-->
-<!--<bean id="exceptionResolver" class="cn.scud.exception.ExceptionHandler"/>-->
+<bean id="exceptionResolver" class="cn.scud.exception.ExceptionHandler"/>
 
 
 </beans>

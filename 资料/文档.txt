@@ -31,12 +31,15 @@
 	UserIdCardNum: 身份证号码
 	UserInfoEmail: 邮箱
 	UserInfoSex: 用户性别
-	UserPicture: 用户头像
+	UserInfoPicture: 用户头像
+	UserInfoLabel: 用户标签（教师啊，美容师什么的）  （ 这些信息在展示附近人的试试需要展示出来）
+	UserInfoSignature：个性签名
 	
 	3.
-	订单：Order
+	发布订单的信息：Order
 	orderId: 订单id
 	orderUserId:订单发起人ID
+	orderCreateTime； 订单发起时间
 	orderComplteFlag: 订完完成标志
 	orderToken: 订单唯一编号（唯一标识，自动生成）
 	orderContent:订单内容
@@ -47,7 +50,7 @@
 	orderCallScope:订单呼叫范围（全行业，或者 关键词推送）
 	orderPictures:订单相关图片
 
-	二、
+	4、
 	用户评价表：
 	evaluateId； 评价ID
 	evaluateOwnerUerID：评对象者ID

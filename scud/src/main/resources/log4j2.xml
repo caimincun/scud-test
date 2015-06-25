@@ -19,12 +19,9 @@
               <!--对特定的包或者类指定日志输出其,可以有多个-->
 
            <!--additivity="false"表明是否继承根root输出器,上面定义那个-->
-           <!--   <logger name="com.yunci.b"  level="debug"  additivity="false"  >
-                     <AppenderRef ref="MYBATIS_CONSOLE"/>
-              </logger>
-           -->
+
            <!---输出sql语句,这儿name是我整个项目的名称-->
-           <logger name="cn.springmvc"  level="debug"  additivity="false"  >
+           <logger name="cn.scud"  level="debug"  additivity="false"  >
                <AppenderRef ref="ConsoleSql"/>
            </logger>
 

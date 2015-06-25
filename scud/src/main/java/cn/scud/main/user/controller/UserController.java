@@ -1,5 +1,6 @@
 package cn.scud.main.user.controller;
 
+import cn.scud.commoms.CodeDefined;
 import cn.scud.commoms.response.*;
 import cn.scud.main.user.model.User;
 import cn.scud.main.user.service.UserService;
@@ -27,33 +28,50 @@ import java.util.List;
  */
 //@RestController
 @Controller
+@RequestMapping("/user")
 public class UserController {
 
     @Resource
     private UserService userService;
 
     /**
-     * 添加用户
+     * 用户注册
      * @param user
      * @return
      */
-    @RequestMapping(value="/user/add")
+    @RequestMapping(value="/add")
     @ResponseBody
-    public OperatorResponse addUser(HttpServletRequest request) throws Exception {
-        User user =  StreamSerializer.streamSerializer(request.getInputStream(), User.class);
-        String ip = WebUtil.getRemoteHost(request);
+    public OperatorResponse addUser(HttpServletRequest request,User user) throws Exception {
+//        User user =  StreamSerializer.streamSerializer(request.getInputStream(), User.class);
+        String ip = WebUtil.getRemoteHost(request);// 获取注册ip
         user.setLastLoginIp(ip);
         userService.addUser(user);
-        System.out.println("user"+user);
         GetObjSucRes objSucRes = new GetObjSucRes();
         objSucRes.setData(user);
         return objSucRes;
     }
 
-    @RequestMapping(value="/index")
-    public String index(HttpServletRequest request, HttpServletResponse response){
-        return "index";
+    /**
+     * 用户登录
+     * @param request
+     * @param user
+     * @return
+     * @throws Exception
+     */
+    @RequestMapping("/userLogin")
+    @ResponseBody
+    public OperatorResponse loginUser(HttpServletRequest request,User user)throws Exception{
+//        User user =  StreamSerializer.streamSerializer(request.getInputStream(), User.class); // 这个是为andorid端json数据解析准备
+        User fulUser= userService.loginUser(user);
+        if(fulUser==null){
+            return new ErrorJsonRes(CodeDefined.ACCOUNT_USER_LOGIN,CodeDefined.getMessage(CodeDefined.ACCOUNT_USER_LOGIN));
+        }
+        GetObjSucRes objSucRes = new GetObjSucRes();
+        objSucRes.setData(fulUser);
+        return objSucRes;
     }
+
+
 
     @RequestMapping("/select")
     @ResponseBody

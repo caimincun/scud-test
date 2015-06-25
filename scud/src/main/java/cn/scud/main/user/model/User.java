@@ -12,17 +12,17 @@ public class User implements Serializable {
 
     private String phoneNumber;
 
-    private String Password;
+    private String password;
     // 唯一标识
     private String userToken;
     // 注册渠道，android或者ios
-    private String RegChannel;
+    private String regChannel;
     //注册时间
-    private String RegDate;
+    private String regDate;
     // 最后一次登录时间
-    private String LastLoginDate;
+    private String lastLoginDate;
     // 最后一次登录Ip
-    private String LastLoginIp;
+    private String lastLoginIp;
 
     public int getId() {
         return id;
@@ -41,11 +41,11 @@ public class User implements Serializable {
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 
     public String getUserToken() {
@@ -57,48 +57,48 @@ public class User implements Serializable {
     }
 
     public String getRegChannel() {
-        return RegChannel;
+        return regChannel;
     }
 
     public void setRegChannel(String regChannel) {
-        RegChannel = regChannel;
+        this.regChannel = regChannel;
     }
 
     public String getRegDate() {
-        return RegDate;
+        return regDate;
     }
 
     public void setRegDate(String regDate) {
-        RegDate = regDate;
+        this.regDate = regDate;
     }
 
     public String getLastLoginDate() {
-        return LastLoginDate;
+        return lastLoginDate;
     }
 
     public void setLastLoginDate(String lastLoginDate) {
-        LastLoginDate = lastLoginDate;
+        this.lastLoginDate = lastLoginDate;
     }
 
     public String getLastLoginIp() {
-        return LastLoginIp;
+        return lastLoginIp;
     }
 
     public void setLastLoginIp(String lastLoginIp) {
-        LastLoginIp = lastLoginIp;
+        this.lastLoginIp = lastLoginIp;
     }
 
-    @Override
-    public String toString() {
+    @java.lang.Override
+    public java.lang.String toString() {
         return "User{" +
                 "id=" + id +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", Password='" + Password + '\'' +
+                ", password='" + password + '\'' +
                 ", userToken='" + userToken + '\'' +
-                ", RegChannel='" + RegChannel + '\'' +
-                ", RegDate='" + RegDate + '\'' +
-                ", LastLoginDate='" + LastLoginDate + '\'' +
-                ", LastLoginIp='" + LastLoginIp + '\'' +
+                ", regChannel='" + regChannel + '\'' +
+                ", regDate='" + regDate + '\'' +
+                ", lastLoginDate='" + lastLoginDate + '\'' +
+                ", lastLoginIp='" + lastLoginIp + '\'' +
                 '}';
     }
 }

@@ -6,19 +6,39 @@ package cn.scud.main.user.model;
  */
 public class UserInfo {
 
-    private int UserInfoId;
+    private int userInfoId;
 
-    private int UserID;
+    private int userID;
 
     private String userName;
     // 真是姓名
-    private String UserRealName;
+    private String userRealName;
     // 身份证号码
-    private String UserIdCardNum;
+    private String userIdCardNum;
     //邮箱
-    private String UserInfoEmail;
+    private String userInfoEmail;
     // 性别
-    private int UserInfoSex;
+    private int userInfoSex;
+    //用户标签
+    private String userInfoLabel;
+    // 用户个性签名
+    private String userInfoSignature;
+
+    public int getUserInfoId() {
+        return userInfoId;
+    }
+
+    public void setUserInfoId(int userInfoId) {
+        this.userInfoId = userInfoId;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 
     public String getUserName() {
         return userName;
@@ -28,64 +48,66 @@ public class UserInfo {
         this.userName = userName;
     }
 
-    public int getUserInfoId() {
-        return UserInfoId;
-    }
-
-    public void setUserInfoId(int userInfoId) {
-        UserInfoId = userInfoId;
-    }
-
-    public int getUserID() {
-        return UserID;
-    }
-
-    public void setUserID(int userID) {
-        UserID = userID;
-    }
-
     public String getUserRealName() {
-        return UserRealName;
+        return userRealName;
     }
 
     public void setUserRealName(String userRealName) {
-        UserRealName = userRealName;
+        this.userRealName = userRealName;
     }
 
     public String getUserIdCardNum() {
-        return UserIdCardNum;
+        return userIdCardNum;
     }
 
     public void setUserIdCardNum(String userIdCardNum) {
-        UserIdCardNum = userIdCardNum;
+        this.userIdCardNum = userIdCardNum;
     }
 
     public String getUserInfoEmail() {
-        return UserInfoEmail;
+        return userInfoEmail;
     }
 
     public void setUserInfoEmail(String userInfoEmail) {
-        UserInfoEmail = userInfoEmail;
+        this.userInfoEmail = userInfoEmail;
     }
 
     public int getUserInfoSex() {
-        return UserInfoSex;
+        return userInfoSex;
     }
 
     public void setUserInfoSex(int userInfoSex) {
-        UserInfoSex = userInfoSex;
+        this.userInfoSex = userInfoSex;
     }
 
-    @Override
-    public String toString() {
+    public String getUserInfoLabel() {
+        return userInfoLabel;
+    }
+
+    public void setUserInfoLabel(String userInfoLabel) {
+        this.userInfoLabel = userInfoLabel;
+    }
+
+    public String getUserInfoSignature() {
+        return userInfoSignature;
+    }
+
+    public void setUserInfoSignature(String userInfoSignature) {
+        this.userInfoSignature = userInfoSignature;
+    }
+
+    @java.lang.Override
+    public java.lang.String toString() {
         return "UserInfo{" +
-                "UserInfoId=" + UserInfoId +
-                ", UserID=" + UserID +
+                "userInfoId=" + userInfoId +
+                ", userID=" + userID +
                 ", userName='" + userName + '\'' +
-                ", UserRealName='" + UserRealName + '\'' +
-                ", UserIdCardNum='" + UserIdCardNum + '\'' +
-                ", UserInfoEmail='" + UserInfoEmail + '\'' +
-                ", UserInfoSex=" + UserInfoSex +
+                ", userRealName='" + userRealName + '\'' +
+                ", userIdCardNum='" + userIdCardNum + '\'' +
+                ", userInfoEmail='" + userInfoEmail + '\'' +
+                ", userInfoSex=" + userInfoSex +
+                ", userInfoLabel='" + userInfoLabel + '\'' +
+                ", userInfoSignature='" + userInfoSignature + '\'' +
                 '}';
     }
 }
